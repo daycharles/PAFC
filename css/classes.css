@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg);
+}
+
+.logo img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 150px;
+    margin-left: 20px;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 1rem 2rem;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Navigation Links */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 20px; /* Increased margin for better spacing */
+}
+
+.nav-links a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500; /* Medium weight for cleaner look */
+    font-size: 1.1rem; /* Slightly larger font size */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Change color on hover for interactivity */
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; /* Slightly larger for better touch targets */
+    height: 30px;
+    margin-right: 20px;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        background-color: #333;
+        top: 58px;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* Classes and Hours Page */
+.hours {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.class-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.class-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.class-item h2 {
+    color: #007BFF;
+}
+
+.hours ul {
+    list-style: none;
+    padding: 0;
+    color: #000000;
+}
+
+.hours li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.calendar{
+    padding-top: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#sectionTitle{
+    color: #000000;
+}
+
+/* Grid layout setup */
+.grid-header {grid-area: header;}
+.grid-main { grid-area: main; }
+.grid-footer { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    gap: 10px;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 1rem 2rem;
+}

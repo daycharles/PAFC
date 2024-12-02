@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Power Alley Fitness Center</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="grid-container">
+    <div class="grid-header">
+        <header class="header">
+            <nav class="nav-container">
+                <div class="logo">
+                    <img src="images/PowerAlley_New_Logo.png" alt="Power Alley Fitness Club" onclick="window.location.href='index.html';">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="classes.html">Classes & Hours</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="grid-main">
+        <section class="contact-form">
+            <div class="shade">
+                <div class="blackboard">
+                    <div class="form">
+                        <form>
+                            <p>
+                                <label>Name: </label>
+                                <input type="text" placeholder="John Smith" required/>
+                            </p>
+                            <p>
+                                <label>Email: </label>
+                                <input type="email" id="email" placeholder="example@email.com" required/>
+                            </p>
+                            <p>
+                                <label>Phone: </label>
+                                <input type="tel" placeholder="(123) 456-7890"/>
+                            </p>
+                            <p>
+                                <label>Reason for Contact</label>
+                                <br>
+                                <input type="radio" id="membership_inquiry" name="contact_reason"
+                                       value="membership_inquiry">
+                                <label for="membership_inquiry">Membership Inquiry</label><br>
+                                <input type="radio" id="general_inquiry" name="contact_reason" value="general_inquiry">
+                                <label for="general_inquiry">General Inquiry</label><br>
+                                <input type="radio" id="feedback" name="contact_reason" value="feedback">
+                                <label for="feedback">Feedback</label><br>
+                                <input type="radio" id="other" name="contact_reason" value="other">
+                                <label for="other">Other</label>
+                                <input type="text" id="otherType" placeholder="(optional)">
+                            </p>
+                            <p>
+                                <label>Message: </label><br>
+                                <textarea required></textarea>
+                            </p>
+                            <p class="wipeout">
+                                <button type="button"
+                                        id="submitButton">
+                                    Send
+                                </button>
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="grid-footer">
+        <footer>
+            <p>© 2023 Power Alley Fitness Center | Follow us on
+                <a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Twitter</a>
+            </p>
+        </footer>
+    </div>
+</div>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
