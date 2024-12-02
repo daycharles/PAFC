@@ -225,3 +225,29 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+@media screen and (max-width: 768px) {
+    .logo img {
+        height: 50px;
+        margin-left: 20px;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        background-color: #333;
+        top: 58px;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+}

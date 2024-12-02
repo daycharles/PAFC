@@ -101,6 +101,10 @@ nav {
     .burger {
         display: flex;
     }
+    .logo img {
+        height: 50px;
+        margin-left: 20px;
+    }
 }
 
 /* Classes and Hours Page */
